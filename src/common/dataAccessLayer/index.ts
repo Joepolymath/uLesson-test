@@ -23,7 +23,7 @@ class DAL<T extends Document> {
       populateData = ['', ''];
     }
     if (!selectData) {
-      selectData = '';
+      selectData = '-__v';
     }
     return await this.model
       .find(query)
@@ -40,7 +40,7 @@ class DAL<T extends Document> {
       populateData = ['', ''];
     }
     if (!selectData) {
-      selectData = '';
+      selectData = '-__v';
     }
     return await this.model
       .findOne(query)

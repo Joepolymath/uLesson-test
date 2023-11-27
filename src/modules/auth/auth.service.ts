@@ -7,12 +7,11 @@ import { BCRYPT_SALT } from '../../configs/env.config';
 import responseUtils from '../../common/utilities/response.utils';
 
 const userDAL = new DAL(userModel);
-const userDALInstance: typeof userDAL = new DAL(userModel);
 
 import { generateToken } from '../../common/utilities/authToken.utils';
 
 class AuthServices {
-  private userRepo: typeof userDAL = new DAL(userModel);
+  private userRepo: typeof userDAL;
   constructor() {
     this.userRepo = new DAL(userModel);
   }

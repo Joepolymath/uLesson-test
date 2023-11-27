@@ -7,8 +7,9 @@ import logger from '../configs/logger.config';
 import App from '../app';
 import AuthController from '../modules/auth/auth.controller';
 import { connectDb } from '../setup/database';
+import LessonController from '../modules/lessons/lessons.controller';
 
-const app = new App([new AuthController()]);
+const app = new App([new AuthController(), new LessonController()]);
 
 const debug = debugLib('congreGate:server');
 
