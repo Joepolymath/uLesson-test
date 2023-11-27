@@ -74,7 +74,6 @@ class LessonServices {
       if (!foundSubject) {
         return new HttpException(400, 'Invalid Subject');
       }
-      console.log(foundSubject);
       const foundChapters = await this.chapterRepo.findAll({
         subject: payload.subject,
       });

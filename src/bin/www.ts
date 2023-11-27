@@ -8,8 +8,13 @@ import App from '../app';
 import AuthController from '../modules/auth/auth.controller';
 import { connectDb } from '../setup/database';
 import LessonController from '../modules/lessons/lessons.controller';
+import QuizController from '../modules/quizzes/quizzes.controller';
 
-const app = new App([new AuthController(), new LessonController()]);
+const app = new App([
+  new AuthController(),
+  new LessonController(),
+  new QuizController(),
+]);
 
 const debug = debugLib('congreGate:server');
 
